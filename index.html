@@ -21,7 +21,7 @@
     color: var(--text);
     line-height: 1.7;
   }
-  .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px; }
   header { text-align: center; padding-bottom: 8px; }
   .avatar {
     width: 120px; height: 120px; border-radius: 50%;
@@ -29,6 +29,11 @@
   }
   h1 { font-size: 2rem; margin-top: 16px; }
   .tagline { color: var(--muted); font-size: 1.05rem; margin-top: 8px; }
+  .gh-link {
+    display: inline-flex; margin-top: 12px;
+    color: var(--muted); transition: color .2s;
+  }
+  .gh-link:hover { color: var(--accent); }
   section {
     background: var(--card); border: 1px solid var(--border);
     border-radius: 12px; padding: 24px; margin-top: 24px;
@@ -40,14 +45,8 @@
     padding: 4px 12px; border-radius: 999px; font-size: .9rem;
   }
   .stats { text-align: center; }
-  .stats img { max-width: 100%; height: auto; border-radius: 8px; }
-  .links { display: flex; flex-wrap: wrap; gap: 16px; }
-  .links a { color: var(--accent); text-decoration: none; }
-  .links a:hover { text-decoration: underline; }
-  footer {
-    text-align: center; color: var(--muted);
-    font-size: .85rem; padding-top: 32px;
-  }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .badges img { height: 22px; }
 </style>
 </head>
 <body>
@@ -56,15 +55,19 @@
   <header>
     <img class="avatar" src="https://avatars.githubusercontent.com/u/155791016?v=4" alt="头像">
     <h1>JunLang</h1>
-    <p class="tagline">计算机专业学生 · 后端开发与系统编程爱好者</p>
+    <p class="tagline">学生 · 后端、系统与 AI Agent</p>
+    <a class="gh-link" href="https://github.com/JunLang-7" target="_blank" rel="noopener" aria-label="GitHub 主页">
+      <svg viewBox="0 0 16 16" width="24" height="24" fill="currentColor" aria-hidden="true">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+      </svg>
+    </a>
   </header>
 
   <section>
     <h2>关于我</h2>
     <p>
-      热爱后端开发与系统编程，日常主要用 Go 写服务端项目，
-      也折腾过 Rust 编译器、操作系统实验（xv6 / rCore）和分布式 KV 系统。
-      喜欢把想法落地成能跑起来的代码。
+      喜欢写代码，主要用 Go 和 TypeScript，
+      最近在折腾 AI Agent，也写过后端服务和系统底层。
     </p>
   </section>
 
@@ -72,8 +75,8 @@
     <h2>技术栈</h2>
     <div class="chips">
       <span class="chip">Go</span>
-      <span class="chip">Rust</span>
       <span class="chip">TypeScript</span>
+      <span class="chip">Rust</span>
       <span class="chip">Python</span>
       <span class="chip">C / C++</span>
       <span class="chip">Shell</span>
@@ -82,18 +85,11 @@
 
   <section class="stats">
     <h2>GitHub 统计</h2>
-    <img src="https://github-readme-stats.vercel.app/api?username=JunLang-7&amp;show_icons=true&amp;theme=swift&amp;count_private=true"
-         alt="GitHub 统计卡片">
-  </section>
-
-  <section>
-    <h2>联系我</h2>
-    <div class="links">
-      <a href="https://github.com/JunLang-7">GitHub</a>
+    <div class="badges">
+      <img src="https://img.shields.io/github/followers/JunLang-7?style=flat-square&amp;label=Followers&amp;color=2563eb" alt="Followers">
+      <img src="https://img.shields.io/github/stars/JunLang-7?style=flat-square&amp;label=Stars&amp;color=2563eb" alt="Stars">
     </div>
   </section>
-
-  <footer>© 2026 JunLang · 由 GitHub Pages 托管</footer>
 
 </div>
 </body>

@@ -1,32 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mozilla</title>
-    <link href="styles/style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JunLang 的个人主页</title>
+<style>
+  :root {
+    --text: #1f2937;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --bg: #f9fafb;
+    --card: #ffffff;
+    --border: #e5e7eb;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+  header { text-align: center; padding-bottom: 8px; }
+  .avatar {
+    width: 120px; height: 120px; border-radius: 50%;
+    border: 3px solid var(--accent); object-fit: cover;
+  }
+  h1 { font-size: 2rem; margin-top: 16px; }
+  .tagline { color: var(--muted); font-size: 1.05rem; margin-top: 8px; }
+  section {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px; margin-top: 24px;
+  }
+  h2 { font-size: 1.15rem; margin-bottom: 12px; color: var(--accent); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    background: #eff6ff; color: var(--accent);
+    padding: 4px 12px; border-radius: 999px; font-size: .9rem;
+  }
+  .stats { text-align: center; }
+  .stats img { max-width: 100%; height: auto; border-radius: 8px; }
+  .links { display: flex; flex-wrap: wrap; gap: 16px; }
+  .links a { color: var(--accent); text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+  footer {
+    text-align: center; color: var(--muted);
+    font-size: .85rem; padding-top: 32px;
+  }
+</style>
 </head>
 <body>
-    <h1>Mozilla is cool</h1>
-    <img src="https://vignette.wikia.nocookie.net/logopedia/images/0/01/Mozilla_Firefox_2004_Logo.png/revision/latest?cb=20190820193019" 
-    alt="Firefox 标志：一只盘旋在地球上的火狐" width="256" height="256">
-    <p>At Mozilla, we're a global community of</p>
+<div class="container">
 
-<ul>
-  <li>technologists</li>
-  <li>thinkers</li>
-  <li>builders</li>
-</ul>
-<p>working together to keep the Internet alive and accessible, 
-  so people worldwide can be informed contributors and creators of the Web. 
-  We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+  <header>
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/155791016?v=4" alt="头像">
+    <h1>JunLang</h1>
+    <p class="tagline">计算机专业学生 · 后端开发与系统编程爱好者</p>
+  </header>
 
-<p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values
-   and principles that guide the pursuit of our mission.</p>
+  <section>
+    <h2>关于我</h2>
+    <p>
+      热爱后端开发与系统编程，日常主要用 Go 写服务端项目，
+      也折腾过 Rust 编译器、操作系统实验（xv6 / rCore）和分布式 KV 系统。
+      喜欢把想法落地成能跑起来的代码。
+    </p>
+  </section>
 
+  <section>
+    <h2>技术栈</h2>
+    <div class="chips">
+      <span class="chip">Go</span>
+      <span class="chip">Rust</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">Python</span>
+      <span class="chip">C / C++</span>
+      <span class="chip">Shell</span>
+    </div>
+  </section>
+
+  <section class="stats">
+    <h2>GitHub 统计</h2>
+    <img src="https://github-readme-stats.vercel.app/api?username=JunLang-7&amp;show_icons=true&amp;theme=swift&amp;count_private=true"
+         alt="GitHub 统计卡片">
+  </section>
+
+  <section>
+    <h2>联系我</h2>
+    <div class="links">
+      <a href="https://github.com/JunLang-7">GitHub</a>
+    </div>
+  </section>
+
+  <footer>© 2026 JunLang · 由 GitHub Pages 托管</footer>
+
+</div>
 </body>
-<button>Change user</button>
-<script src="scripts/main.js"></script>
 </html>

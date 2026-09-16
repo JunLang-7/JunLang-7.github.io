@@ -3,15 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JunLang 的个人主页</title>
+<title>江骏朗-个人主页</title>
 <style>
   :root {
+    color-scheme: light dark;
     --text: #1f2937;
     --muted: #6b7280;
     --accent: #2563eb;
     --bg: #f9fafb;
     --card: #ffffff;
     --border: #e5e7eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --bg: #0f172a;
+      --card: #1e293b;
+      --border: #334155;
+    }
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -20,8 +31,9 @@
     background: var(--bg);
     color: var(--text);
     line-height: 1.7;
+    transition: background-color .3s ease, color .3s ease;
   }
-  .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px; }
+  .container { width: 80%; max-width: 960px; margin: 0 auto; padding: 48px 24px 64px; }
   header { text-align: center; padding-bottom: 8px; }
   .avatar {
     width: 120px; height: 120px; border-radius: 50%;
@@ -29,74 +41,86 @@
   }
   h1 { font-size: 2rem; margin-top: 16px; }
   .tagline { color: var(--muted); font-size: 1.05rem; margin-top: 8px; }
-  .gh-link {
-    display: inline-flex; margin-top: 12px;
-    color: var(--muted); transition: color .2s;
-  }
-  .gh-link:hover { color: var(--accent); }
+  .icon-row { display: flex; justify-content: center; gap: 16px; margin-top: 12px; }
+  .icon-link { color: var(--muted); transition: color .2s; display: inline-flex; }
+  .icon-link:hover { color: var(--accent); }
   section {
     background: var(--card); border: 1px solid var(--border);
     border-radius: 12px; padding: 24px; margin-top: 24px;
+    transition: background-color .3s ease, border-color .3s ease;
   }
-  h2 { font-size: 1.15rem; margin-bottom: 12px; color: var(--accent); }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .chip {
-    background: #eff6ff; color: var(--accent);
-    padding: 4px 12px; border-radius: 999px; font-size: .9rem;
-  }
-  .stats { text-align: center; }
-  .badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
-  .badges img { height: 22px; }
+  h2 { font-size: 1.15rem; margin-bottom: 8px; color: var(--accent); }
+  .edu-line { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .edu-logo { height: 32px; width: auto; }
+  .sub { margin: 14px 0 4px; }
+  section ul { padding-left: 1.2em; }
+  section li { margin-top: 4px; }
+  section a { color: var(--accent); text-decoration: none; }
+  section a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
 <div class="container">
 
   <header>
-    <img class="avatar" src="https://avatars.githubusercontent.com/u/155791016?v=4" alt="头像">
-    <h1>JunLang</h1>
-    <p class="tagline">学生 · 后端、系统与 AI Agent</p>
-    <a class="gh-link" href="https://github.com/JunLang-7" target="_blank" rel="noopener" aria-label="GitHub 主页">
-      <svg viewBox="0 0 16 16" width="24" height="24" fill="currentColor" aria-hidden="true">
-        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
-      </svg>
-    </a>
+    <h1>江骏朗</h1>
+    <div class="icon-row">
+      <a class="icon-link" href="https://github.com/JunLang-7" target="_blank" rel="noopener" aria-label="GitHub 主页">
+        <svg viewBox="0 0 16 16" width="24" height="24" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+        </svg>
+      </a>
+      <a class="icon-link" href="mailto:junlang07@mail.sdu.edu.cn" aria-label="邮箱">
+        <svg viewBox="0 0 16 16" width="24" height="24" fill="currentColor" aria-hidden="true">
+          <path d="M2.013 3.047A2 2 0 0 1 4 2h8a2 2 0 0 1 1.987 1.953L8 7.199 2.013 3.047ZM1 4.5v6.98A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.52V4.5L8.754 8.708a.75.75 0 0 1-.508 0L1 4.5Z"/>
+        </svg>
+      </a>
+    </div>
   </header>
 
   <section>
-    <h2>关于我</h2>
-    <p>
-      喜欢写代码，主要用 Go 和 TypeScript，
-      最近在折腾 AI Agent，也写过后端服务和系统底层。
+    <h2>教育背景</h2>
+    <p class="edu-line">
+      <img class="edu-logo" src="./assets/sdu-logo.svg" alt="山东大学校徽">
+      <strong>山东大学</strong> · 行政管理 + 电子科学与技术（双学位）· 2023.09 – 2028.06
     </p>
   </section>
 
   <section>
     <h2>实习经历</h2>
-    <p>
-      <strong>七牛云</strong> · 2026.07 – 2026.09<br>
-      参与后端相关开发工作，在真实的工程环境中实践了从需求到上线的完整流程。
-    </p>
+    <p><strong>七牛云</strong> · 产品架构实习生 · <a href="https://github.com/1024XEngineer/VoiceLife" target="_blank" rel="noopener">VoiceLife 智能硬件语音助手</a> · 2026.07 – 2026.09</p>
+    <ul>
+      <li>参与产品架构与技术方案设计，拆分日程、提醒、语音、IM、存储与设备运行时等模块。</li>
+      <li>负责设备侧 IM / 微信绑定、PostgreSQL 网关与 SSE 动作流等功能落地，完成持久化重放、PSRAM 优化与 Host / 真机 HIL 分层测试门禁。</li>
+    </ul>
   </section>
 
   <section>
-    <h2>技术栈</h2>
-    <div class="chips">
-      <span class="chip">Go</span>
-      <span class="chip">TypeScript</span>
-      <span class="chip">Rust</span>
-      <span class="chip">Python</span>
-      <span class="chip">C / C++</span>
-      <span class="chip">Shell</span>
-    </div>
+    <h2>项目经历</h2>
+    <p class="sub"><strong>腾讯犀牛鸟开源人才计划</strong> · 大模型应用基础设施 · 2026.07 – 2026.08</p>
+    <ul>
+      <li><a href="https://github.com/TencentCloud/TencentDB-Agent-Memory/pull/590" target="_blank" rel="noopener">TencentDB Agent Memory</a>：检查点计数重校准、live-store / JSONL 回退机制与回归测试。</li>
+      <li><a href="https://github.com/Tencent/WeKnora/pull/2303" target="_blank" rel="noopener">WeKnora</a>：MySQL 全量迁移链、Docker 环境与冒烟 / 集成测试。</li>
+    </ul>
+    <p class="sub"><strong>个人项目</strong></p>
+    <ul>
+      <li><a href="https://github.com/JunLang-7/HelloAgents-ts" target="_blank" rel="noopener">HelloAgents TypeScript</a>：基于 Python 原版与 Go 版本重实现并发布 <a href="https://www.npmjs.com/package/@junlang-7/helloagents" target="_blank" rel="noopener">npm 包</a>。</li>
+    </ul>
+    <p class="sub"><strong>计算机系统课程实践</strong> · 2026.01 – 2026.05</p>
+    <ul>
+      <li><a href="https://github.com/JunLang-7/Distributed-Systems" target="_blank" rel="noopener">MIT 6.5840</a>：实现 MapReduce、Raft、容错键值服务与动态分片键值服务。</li>
+      <li><a href="https://github.com/JunLang-7/compiler" target="_blank" rel="noopener">北京大学编译实践</a>：以 Rust 实现 SysY 到 Koopa IR / RISC-V 的完整编译链。</li>
+    </ul>
   </section>
 
-  <section class="stats">
-    <h2>GitHub 统计</h2>
-    <div class="badges">
-      <img src="https://img.shields.io/github/followers/JunLang-7?style=flat-square&amp;label=Followers&amp;color=2563eb" alt="Followers">
-      <img src="https://img.shields.io/github/stars/JunLang-7?style=flat-square&amp;label=Stars&amp;color=2563eb" alt="Stars">
-    </div>
+  <section>
+    <h2>获奖经历</h2>
+    <ul>
+      <li>高教杯全国大学生数学建模竞赛 · 国家二等奖（2025）</li>
+      <li>蓝桥杯 C++ 组、Python 组 · 山东赛区二等奖（2024、2025）</li>
+      <li>山东大学科研创新类特长奖学金</li>
+      <li>山东大学学业奖学金三等奖</li>
+    </ul>
   </section>
 
 </div>

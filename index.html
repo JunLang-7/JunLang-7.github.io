@@ -50,7 +50,9 @@
     transition: background-color .3s ease, border-color .3s ease;
   }
   h2 { font-size: 1.15rem; margin-bottom: 8px; color: var(--accent); }
-  .edu-line { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .line.line-center { align-items: center; }
+  .time { color: var(--muted); font-size: 0.92em; white-space: nowrap; }
   .edu-logo { height: 32px; width: auto; }
   .sub { margin: 14px 0 4px; }
   section ul { padding-left: 1.2em; }
@@ -80,15 +82,18 @@
 
   <section>
     <h2>教育背景</h2>
-    <p class="edu-line">
-      <img class="edu-logo" src="./assets/sdu-logo.svg" alt="山东大学校徽">
-      <strong>山东大学</strong> · 行政管理 + 电子科学与技术（双学位）· 2023.09 – 2028.06
+    <p class="line line-center">
+      <span><img class="edu-logo" src="./assets/sdu-logo.svg" alt="山东大学校徽"><strong>山东大学</strong> 行政管理 + 电子科学与技术（双学位）</span>
+      <span class="time">2023.09 – 2028.06</span>
     </p>
   </section>
 
   <section>
     <h2>实习经历</h2>
-    <p><strong>七牛云</strong> · 产品架构实习生 · <a href="https://github.com/1024XEngineer/VoiceLife" target="_blank" rel="noopener">VoiceLife 智能硬件语音助手</a> · 2026.07 – 2026.09</p>
+    <p class="line">
+      <span><strong>七牛云</strong> 产品架构实习生 <a href="https://github.com/1024XEngineer/VoiceLife" target="_blank" rel="noopener">VoiceLife 智能硬件语音助手</a></span>
+      <span class="time">2026.07 – 2026.09</span>
+    </p>
     <ul>
       <li>参与产品架构与技术方案设计，拆分日程、提醒、语音、IM、存储与设备运行时等模块。</li>
       <li>负责设备侧 IM / 微信绑定、PostgreSQL 网关与 SSE 动作流等功能落地，完成持久化重放、PSRAM 优化与 Host / 真机 HIL 分层测试门禁。</li>
@@ -97,7 +102,10 @@
 
   <section>
     <h2>项目经历</h2>
-    <p class="sub"><strong>腾讯犀牛鸟开源人才计划</strong> · 大模型应用基础设施 · 2026.07 – 2026.08</p>
+    <p class="sub line">
+      <span><strong>腾讯犀牛鸟开源人才计划</strong> · 大模型应用基础设施</span>
+      <span class="time">2026.07 – 2026.08</span>
+    </p>
     <ul>
       <li><a href="https://github.com/TencentCloud/TencentDB-Agent-Memory/pull/590" target="_blank" rel="noopener">TencentDB Agent Memory</a>：检查点计数重校准、live-store / JSONL 回退机制与回归测试。</li>
       <li><a href="https://github.com/Tencent/WeKnora/pull/2303" target="_blank" rel="noopener">WeKnora</a>：MySQL 全量迁移链、Docker 环境与冒烟 / 集成测试。</li>
@@ -106,7 +114,10 @@
     <ul>
       <li><a href="https://github.com/JunLang-7/HelloAgents-ts" target="_blank" rel="noopener">HelloAgents TypeScript</a>：基于 Python 原版与 Go 版本重实现并发布 <a href="https://www.npmjs.com/package/@junlang-7/helloagents" target="_blank" rel="noopener">npm 包</a>。</li>
     </ul>
-    <p class="sub"><strong>计算机系统课程实践</strong> · 2026.01 – 2026.05</p>
+    <p class="sub line">
+      <span><strong>计算机系统课程实践</strong></span>
+      <span class="time">2026.01 – 2026.05</span>
+    </p>
     <ul>
       <li><a href="https://github.com/JunLang-7/Distributed-Systems" target="_blank" rel="noopener">MIT 6.5840</a>：实现 MapReduce、Raft、容错键值服务与动态分片键值服务。</li>
       <li><a href="https://github.com/JunLang-7/compiler" target="_blank" rel="noopener">北京大学编译实践</a>：以 Rust 实现 SysY 到 Koopa IR / RISC-V 的完整编译链。</li>
@@ -116,8 +127,8 @@
   <section>
     <h2>获奖经历</h2>
     <ul>
-      <li>高教杯全国大学生数学建模竞赛 · 国家二等奖（2025）</li>
-      <li>蓝桥杯 C++ 组、Python 组 · 山东赛区二等奖（2024、2025）</li>
+      <li><span class="line"><span>2025年高教杯全国大学生数学建模竞赛 国家二等奖</span></span></li>
+      <li><span class="line"><span>蓝桥杯 C++ 组、Python 组 山东赛区二等奖</span></span></li>
       <li>山东大学科研创新类特长奖学金</li>
       <li>山东大学学业奖学金三等奖</li>
     </ul>
